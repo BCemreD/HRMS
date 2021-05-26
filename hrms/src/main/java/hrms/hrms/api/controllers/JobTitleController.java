@@ -4,6 +4,7 @@ package hrms.hrms.api.controllers;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,19 +15,21 @@ import hrms.hrms.entities.concretes.JobTitle;
 
 
 @RestController
-@RequestMapping(path = "api/job-titles")
+@RequestMapping( "/api/job-titles")
 
 public class JobTitleController {
 	
 private final JobTitleService jobTitleService;
-    
+
+@Autowired
 public JobTitleController(JobTitleService jobTitleService) {
     	this.jobTitleService = jobTitleService;
     }
     
-@GetMapping(path="getall")
+@GetMapping("/getall")
 public List<JobTitle>getAll(){
 	return this.jobTitleService.findAll();
+
 }
 
 }
