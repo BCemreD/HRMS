@@ -7,11 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 //import lombok.Data;
 
 @Entity
 @Table(name="job-title")
-//@Data
 public class JobTitle {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,7 +1,5 @@
 package hrms.hrms.api.controllers;
 
-
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,29 +9,29 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import hrms.hrms.business.abstracts.JobTitleService;
+import hrms.hrms.business.abstracts.IJobPositionService;
 import hrms.hrms.core.utilities.results.DataResult;
 import hrms.hrms.core.utilities.results.Result;
-import hrms.hrms.entities.concretes.JobTitle;
+import hrms.hrms.entities.concretes.JobPosition;
 
 @RestController
-@RequestMapping( "/api/job-titles")
-public class JobTitleController {
+@RequestMapping("/api/jobposition")
+public class JobPositionController {
 	
-	private final JobTitleService jobTitleService;
-
+	private IJobPositionService iJobPositionService;
+	
 	@Autowired
-	public JobTitleController(JobTitleService jobTitleService) {
-    	this.jobTitleService = jobTitleService;
-    }
-    
-	@GetMapping("/getall")
-	public DataResult<List<JobTitle>>getAll(){
-		return this.jobTitleService.getAll();
+	public JobPositionController (IJobPositionService iJobPositionService) {
+		this.iJobPositionService = iJobPositionService;
 	}
-	@PostMapping("/add")
-    public Result add(@RequestBody JobTitle jobTitle){
-        return this.jobTitleService.add(jobTitle);
-    }
+	
+	@GetMapping("/getall")
+	public DataResult<List<JobPosition>> getAll(){
+		return iJobPositionService.getAll();
+	}
 
+	@PostMapping("/add")
+	public Result add(@RequestBody JobPosition jobPosition) {
+		return this.iJobPositionService.add(jobPosition);
+	}
 }
