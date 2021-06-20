@@ -3,6 +3,7 @@ package hrms.hrms.entities.concretes;
 import javax.persistence.Column;
 import javax.persistence.Table;
 
+import hrms.hrms.core.entities.User;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 

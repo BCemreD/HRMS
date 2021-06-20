@@ -21,6 +21,8 @@ private int id;
 @Column(name="title")
 private String title;
 
+public JobTitle() {}
+
 public JobTitle(int id, String title) {
 	super();
 	this.id = id;

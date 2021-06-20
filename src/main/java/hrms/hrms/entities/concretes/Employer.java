@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-
+import hrms.hrms.core.entities.User;
 import lombok.EqualsAndHashCode;
 
 
@@ -24,16 +24,12 @@ public class Employer extends User{
 	 @Column(name = "web_address")
 	 private String webAddress;
 
-	 @Column(name = "phone_number")
-	 private String phoneNumber;
-	 
 
 	public Employer(int id, String companyName, String webAddress, String phoneNumber) {
 		super();
 		this.id = id;
 		this.companyName = companyName;
 		this.webAddress = webAddress;
-		this.phoneNumber = phoneNumber;
 	}
 
 
@@ -67,12 +63,4 @@ public class Employer extends User{
 	}
 
 
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
-
-
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
 }

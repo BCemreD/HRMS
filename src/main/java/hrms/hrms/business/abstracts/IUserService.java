@@ -2,9 +2,11 @@ package hrms.hrms.business.abstracts;
 
 import java.util.List;
 
-import hrms.hrms.entities.concretes.User;
+import hrms.hrms.core.entities.User;
+
+
 
 public interface IUserService {
 
-	List<User>getAll();
+	User getById(int id);
 }

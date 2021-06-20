@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
+import hrms.hrms.core.entities.User;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
