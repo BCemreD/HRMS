@@ -68,7 +68,7 @@ public class CandidateManager implements ICandidateService{
 	                candidate.getbirthOfYear().toString().isEmpty()||
 	                candidate.getEmail().isEmpty()||
 	                candidate.getPassword().isEmpty()){
-	            return new ErrorResult("Alanlar bos birakilamaz!!");
+	            return new ErrorResult("Cannot be null!");
 	        }
 	        return new SuccessResult();
 	    }

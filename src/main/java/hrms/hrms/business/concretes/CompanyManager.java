@@ -37,7 +37,7 @@ public class CompanyManager implements ICompanyService {
 	@Override
 	public DataResult<Company> getByCompanyNameAndPhones_Phone(String companyName, String phone) {
 		return new SuccessDataResult<Company>(this.iCompanyDao.getByCompanyNameAndPhones_Phone
-				(companyName, phone), "Succesfull");
+				(companyName, phone), "Successfull");
 	}
 
 }

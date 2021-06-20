@@ -18,6 +18,7 @@ public class VerificationCodeManager implements IVerificationCodeService{
 
 	@Autowired
 	private IVerificationCodeDao iVerificationCodeDao;
+	
 	@Override
 	public DataResult<List<VerificationCode>> getAll() {
 		return new SuccessDataResult(this.iVerificationCodeDao.findAll());

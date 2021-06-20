@@ -42,14 +42,14 @@ return result;
 }
 private Result nullControl(JobTitle jobTitle) {
     if(jobTitle.getTitle()==null || jobTitle.getTitle().isBlank()) {
-        return new ErrorResult("Alanlar bos birakilamaz!!!");
+        return new ErrorResult("Cannot be null!");
     }
     return new SuccessResult();
 }
 
 private Result titleRepeatControl(JobTitle jobTitle) {
     if((long) jobTitleDao.findAllByJobTitle(jobTitle.getTitle()).size() !=0 ) {
-        return new ErrorResult("Bu pozisyon mevcut!!!");
+        return new ErrorResult("This position is already existed!");
     }
     return new SuccessResult();
 }
